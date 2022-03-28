@@ -41,6 +41,14 @@ button.cta {
   padding: 20px 30px;
   border-radius: 10px;
   text-decoration: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+a.cta:active,
+button.cta:active {
+  opacity: 0.7;
 }
 
 a.cta-alt,
@@ -62,13 +70,25 @@ h1{
 
 }
 
+h2 {
+  font-weight: 800;
+  font-size: 50px;
+}
+
 h3 {
   font-weight: bold;
   font-size: 30px;
-
 }
 
 h4 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+p{
+  font-weight: bold;
+  font-size: 30px;
+  margin: 30px 0;
 
 }
 
@@ -104,18 +124,274 @@ h4 {
   margin: 0
 }
 
-/* <div class="hero-banner">
-  <div class="wrapper">
-    <h4>Aman from <a href="https://taptapkaboo.com">Tap Tap Kaboom</a> presents</h4>
-    <h1> The Silliest<br/>
-    Most Awesome Gang<br/>
-    In The World</h1>
-    <h3> It's Circle Guy, Hat Guy & Red Guy.<br/>
-    The're the best of friends.</h3>
-    <a class="cta alt" href="#more-info">Read More</a>
-  </div>
-  <div class="chatacter1"></div>
-  <div class="chatacter2"></div>
-  <div class="chatacter3"></div>
+nav {
+  height: 100px;
+  background-color: white;
+  box-shadow: 0 5px 8px rgba(0,0,0,.2);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+a.logo {
+  display: block;
+  width: 300px;
+  height: 40px;
+  position: absolute; top: 50%; left: 30px;
+  margin-top: -20px;
+  margin-left: 30px;
+  background: url(../img/logo.png) no-repeat 0 0;
+  background-size: 100%;
+  overflow: hidden;
+  text-indent: -999px;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0 20px 0 0;
+}
+nav ul li {
+  margin: 0;
+  padding: 0;
+  display: block;
+  float: right;
+}
+nav ul li a {
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #111111;
+  text-decoration: none;
+  padding: 30px 10px;
+  line-height: 30px;
+
+}
+.more-info {
+  text-align: center;
+}
+
+.more-info p {
+  margin: 18px 0 35px;
+}
+
+.more-info h2 {
+  margin: 50px 0 0;
+}
+
+.highlight {
+  background-color: #FFADF9;
+  color: #FF3300;
+  padding: 5px 10px;
+  line-height: 50px;
+  display: inline;
+  font-weight: 800px;
+}
+
+.separator{
+  width: 470px;
+  height: 10px;
+  background-color: #111111;
+  margin: 70px auto;
+}
+
+.story h3{
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.nb-list{
+  width: 470px;
+  padding: 20px 20px 0 20px;
+  box-sizing: border-box;
+  background-color: #EDEDED;
+  float: left;
+  margin: 0 20px 20px 0;
+  position: relative;
+}
+
+.nb-list li{
+  height: 70px;
+  border-radius: 10px;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 20px;
+  padding: 6px 20px;
+  box-sizing: border-box;
+}
+.nb-list li.blue {
+  background-color: #007FFF;
+  color: #111111;}
+.nb-list li.gray {
+  background-color: rgba(0,0,0,.1);}
+.nb-list li.yellow-special {
+  background-color: #FFD400;
+  color: #111111;
+  position: absolute;
+  top: 108px;
+  left: 70px;
+  right: -30px;
+  transform: rotate(8deg);
+  box-shadow: 0 2px 14px rgba(0,0,0,.4)
+}
+.nb-list li.yellow-special:after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 54px;
+  height: 50px;
+  background: url(../img/drag.png) no-repeat 0 0;
+}
+.nb-list li.red {
+  background-color: #FF3300;
+  color: #111111;}
+.nb-list li.pink {
+  background-color: #FFADF9;
+  color: #111111;}
+.nb-list li.salmon {
+  background-color: #FA8072;
+  color: #111111;}
+.nb-list li.yellow {
+  background-color: #FFD400;
+  color: #111111;}
+
+.gang-img{
+  display: block;
+  margin: 0 auto;
+}
+
+footer{
+  text-align: center;
+  color: rgba(0,0,0,.4);
+  font-size: 20px;
+  margin: 85px 0 45px;
+  font-weight: bold;
+}
+
+footer a{
+  color: rgba(0,0,0,.4);
+}
+.popup{
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.popup.show{
+  display: block;
+}
+
+.blanket {
+  background-color: rgba(0,0,0,.7);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.content {
+  box-sizing: border-box;
+  padding: 30px 40px;
+  width: 960px;
+  height: 500px;
+  background-color: white;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -250px;
+  margin-left: -480px;
+}
+
+.popup h2{
+  margin: 10px 0 20px;
+}
+
+.popup .cta{
+  margin-top: 50px;
+}
+
+button.close {
+  width: 80px;
+  height: 80px;
+  background-color: #FF3300;
+  background: url(../img/close.png) no-repeat center center;
+  background-size: 50%;
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  text-indent: -999px;
+  cursor: pointer;
+
+}
+
+.row {
+
+}
+
+.row:after{
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.item{
+  float: left;
+  width: 415px;
+  margin-left: 40px;
+  text-align: left;
+}
+.item:first-child{
+  margin-left: 0;
+}
+label{
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input[type='text']{
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  border: 4px solid #111111;
+  height: 70px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 20px;
+}
+/*     <div class="separator"> </div>
+<div class="story" id="story">
+  <ul class="nb-list">
+    <li class="blue">Rock 'n Roll</li>
+    <li class="gary">&nbsp;</li>
+    <li class="yellow-special">Laughter</li>
+    <li class="red">Square Offs</li>
+    <li class="pink">Circuitous Routes</li>
+    <li class="salmon">Trigonometry</li>
+    <li class="blue">Rad Hats</li>
+    <li class="yellow">Being Silly</li>
+  </ul>
+  <h3>Left: Things We Find Important <br/>
+  Below: Our Story</h3>
+  <p>Once upon a time there was a group of shapes. They were mostly black and rectangular. They were mean and very serious.</p>
+  <p>And so they kicked the 3 shapes that didn't conform out of their gang, which was called the Right Angled Gang.</p>
+  <p>And so these 3 shapes were very sad, but found great joy and comfort being around each other. They soon started having a lot of fun, started rocking and rolling, started being silly, and became the most well-known shape gang in the universe.</p>
+  <p>They even started making fun of squares and rectangles in what they like to call "Square Offs"!</p>
+</div>
+<div class="separator">
 </div>
  */
